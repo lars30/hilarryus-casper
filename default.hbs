@@ -21,7 +21,7 @@
     {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
-<body class="{{body_class}} nav-closed">
+<body class="{{body_class}} nav-open">
 
     {{navigation}}
 
@@ -43,17 +43,7 @@
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'larrydotorg';
-        
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+    {{> google-analytics}}
+    {{> disqus}}
 </body>
 </html>
